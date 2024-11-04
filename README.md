@@ -234,3 +234,6 @@ Within the newly created VPC, I launched an EC2 instance, configuring it to use 
     ```
 
 ---
+
+## Conclusion
+Through these projects, I have gained extensive hands-on experience with Terraform and AWS. Each project allowed me to deepen my understanding of infrastructure automation, from setting up basic EC2 instances to managing complex networking and state management. By leveraging Terraform’s capabilities, I developed skills in creating reusable and flexible infrastructure code, and I am now better equipped to handle real-world deployment scenarios efficiently. This portfolio demonstrates my technical ability and dedication to continuous learning in cloud infrastructure.
