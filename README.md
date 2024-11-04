@@ -71,7 +71,7 @@ Using Terraform, I set up a configuration file defining my desired EC2 instance 
       ami           = "ami-00eeedc4036573771"
       instance_type = "t2.micro"
       tags = {
-        Name = "Yourname-TF-1"
+        Name = "Rajssole-TF-1"
       }
     }
     ```
