@@ -1,39 +1,6 @@
 # Terraform
 
 ## Table of Contents
-- [Lab 1: Creating an EC2 Instance in AWS and Installing Terraform](#lab-1-creating-an-ec2-instance-in-aws-and-installing-terraform)
-  - [Task 1: Installing Terraform on Ubuntu 20.04](#task-1-installing-terraform-on-ubuntu-2004)
-  - [Task 2: Install and Login to Ubuntu Server from AWS EC2 Instance](#task-2-install-and-login-to-ubuntu-server-from-aws-ec2-instance)
-  - [Task 3: Launching My First AWS EC2 Instance using Terraform](#task-3-launching-my-first-aws-ec2-instance-using-terraform)
-- [Lab 2: AWS EC2 Instance Creation using Terraform Variables](#lab-2-aws-ec2-instance-creation-using-terraform-variables)
-  - [Task 1: Creating an EC2 Instance using Variables](#task-1-creating-an-ec2-instance-using-variables)
-  - [Task 2: Implementing Map Variables to Dynamically Fetch AMI](#task-2-implementing-map-variables-to-dynamically-fetch-ami)
-- [Lab 3: Using Terraform Output Feature](#lab-3-using-terraform-output-feature)
-  - [Task 1: Getting EC2 Instance IP Address with Output Feature](#task-1-getting-ec2-instance-ip-address-with-output-feature)
-- [Lab 4: Understanding Local Values, Functions, and Data Sources](#lab-4-understanding-local-values-functions-and-data-sources)
-  - [Task 1: Using Local Values](#task-1-using-local-values)
-  - [Task 2: Using Functions](#task-2-using-functions)
-  - [Task 3: Using Data Sources](#task-3-using-data-sources)
-- [Lab 5: Remote State using Amazon S3](#lab-5-remote-state-using-amazon-s3)
-  - [Task 1: Creating an S3 Bucket](#task-1-creating-an-s3-bucket)
-  - [Task 2: Configuring Remote State](#task-2-configuring-remote-state)
-- [Lab 6: Launching VPC and EC2 Instance](#
-
-
-
-
-
-You said:
-perfect,now use words liske i have performed all the tasks and replace word lab with project 1 and 2 and on
-ChatGPT said:
-ChatGPT
-Here’s the updated README.md with first-person phrasing and the word "Lab" replaced with "Project" for a more cohesive structure.
-
-markdown
-Copy code
-# AWS and Terraform Projects
-
-## Table of Contents
 - [Project 1: Creating an EC2 Instance in AWS and Installing Terraform](#project-1-creating-an-ec2-instance-in-aws-and-installing-terraform)
   - [Task 1: Installing Terraform on Ubuntu 20.04](#task-1-installing-terraform-on-ubuntu-2004)
   - [Task 2: Installing and Logging into an Ubuntu Server from an AWS EC2 Instance](#task-2-installing-and-logging-into-an-ubuntu-server-from-an-aws-ec2-instance)
