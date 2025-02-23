@@ -24,10 +24,10 @@
 
 ## Project 1: Creating an EC2 Instance in AWS and Installing Terraform
 
-I have performed all the tasks in this project to set up my first EC2 instance and install Terraform on it.
+I have performed all the tasks in this project to set up EC2 instance and install Terraform on it.
 
 ### Task 1: Installing Terraform on Ubuntu 20.04
-I started by updating the package repository and installing `curl` to download Terraform. I then set up the HashiCorp key, added the Terraform repository, and installed Terraform. Finally, I verified the installation by running the `terraform -version` command.
+Updating the package repository and installing `curl` to download Terraform. Then set up the HashiCorp key, added the Terraform repository, and installed Terraform. Finally, Verifying the installation by running the `terraform -version` command.
 
 1. Launch a `t2.micro` instance with OS version Ubuntu 20.04 in `us-east-1` with security group including ports 22 and 80.
 2. Log in with the username `ubuntu`.
@@ -46,7 +46,7 @@ I started by updating the package repository and installing `curl` to download T
     ```
 
 ### Task 2: Installing and Logging into an Ubuntu Server from an AWS EC2 Instance
-I created a new EC2 instance on AWS and configured the necessary security group rules for SSH access. Once the instance was running, I used SSH to connect to it, confirming I could access the server remotely.
+Create a new EC2 instance on AWS and configured the necessary security group rules for SSH access. Once the instance was running, Use SSH to connect to it.
 
 1. Install `awscli` and configure AWS credentials:
     ```bash
@@ -60,7 +60,7 @@ I created a new EC2 instance on AWS and configured the necessary security group 
     ```
 
 ### Task 3: Launching My First AWS EC2 Instance using Terraform
-Using Terraform, I set up a configuration file defining my desired EC2 instance setup. I executed `terraform apply` to launch the instance, confirmed its status in the AWS Console, and verified the instance IP address.
+Using Terraform, Set up a configuration file defining my desired EC2 instance setup. Execute `terraform apply` to launch the instance, confirmed its status in the AWS Console, and verify the instance IP address.
 
 1. Create Terraform configuration for EC2 instance (`example.tf`):
     ```hcl
@@ -88,10 +88,10 @@ Using Terraform, I set up a configuration file defining my desired EC2 instance 
 
 ## Project 2: AWS EC2 Instance Creation using Terraform Variables
 
-In this project, I explored using variables to create EC2 instances, allowing for more flexibility in my configurations.
+In this project, Exploring using variables to create EC2 instances, allowing for more flexibility in configurations.
 
 ### Task 1: Creating an EC2 Instance using Variables
-I set up Terraform configuration files with variables for instance type, AMI ID, and region, making it easy to modify these values without changing the core configuration. Running `terraform apply` launched an EC2 instance based on the provided variable values.
+Set up Terraform configuration files with variables for instance type, AMI ID, and region, making it easy to modify these values without changing the core configuration. Running `terraform apply` launched an EC2 instance based on the provided variable values.
 
 1. Configure provider, variables, and instance files.
 2. Initialize and apply the configuration:
@@ -102,7 +102,7 @@ I set up Terraform configuration files with variables for instance type, AMI ID,
     ```
 
 ### Task 2: Implementing Map Variables to Dynamically Fetch AMI
-I created a map variable to dynamically retrieve the correct AMI based on the instance region, making the configuration adaptable for various environments. This approach allowed me to deploy instances in different regions without manual adjustments.
+Create a map variable to dynamically retrieve the correct AMI based on the instance region, making the configuration adaptable for various environments. This approach allowed me to deploy instances in different regions without manual adjustments.
 
 1. Update `instance.tf` and `vars.tf` to include map variables.
 2. Run the plan with variable selection:
@@ -113,10 +113,10 @@ I created a map variable to dynamically retrieve the correct AMI based on the in
 
 ## Project 3: Using Terraform Output Feature
 
-In this project, I utilized Terraform’s output feature to display instance details post-deployment.
+In this project, Utilizing Terraform’s output feature to display instance details post-deployment.
 
 ### Task 1: Getting EC2 Instance IP Address with Output Feature
-I configured Terraform outputs to retrieve the public IP address of my newly created EC2 instance. Running `terraform apply` now displays this IP address in the terminal output, which I confirmed by connecting to the instance using SSH.
+Configured Terraform outputs to retrieve the public IP address of my newly created EC2 instance. Running `terraform apply` now displays this IP address in the terminal output, confirmed by connecting to the instance using SSH.
 
 1. Configure output variables for EC2 instance IP.
 2. Use `terraform output` to display the public IP:
@@ -130,7 +130,7 @@ I configured Terraform outputs to retrieve the public IP address of my newly cre
 I explored local values, functions, and data sources in Terraform to enhance configuration flexibility.
 
 ### Task 1: Using Local Values
-I defined local values to store reusable configuration elements, simplifying my Terraform code. For example, I stored frequently used tags and security groups in local values to avoid repetition.
+Defined local values to store reusable configuration elements, simplifying my Terraform code. For example, I stored frequently used tags and security groups in local values to avoid repetition.
 
 1. Define `local.tf` with custom tags:
     ```hcl
@@ -144,26 +144,26 @@ I defined local values to store reusable configuration elements, simplifying my 
 2. Apply the configuration.
 
 ### Task 2: Using Functions
-I experimented with various functions, such as `length`, `lower`, and `join`, to modify and manage data within my configuration. These functions helped optimize configurations and manage string manipulation.
+Experimented with various functions, such as `length`, `lower`, and `join`, to modify and manage data within my configuration. These functions helped optimize configurations and manage string manipulation.
 
 1. Create instances with mapped AMI values and variable-based tags.
 
 ### Task 3: Using Data Sources
-I implemented data sources to retrieve information about existing AWS resources, such as AMIs and VPCs. This setup allowed me to reference these resources without manually defining them.
+Implemented data sources to retrieve information about existing AWS resources, such as AMIs and VPCs. This setup allowed me to reference these resources without manually defining them.
 
 1. Fetch AMI dynamically using `data` block and launch an instance.
 
 ## Project 5: Remote State using Amazon S3
 
-To enable shared state management, I configured Terraform to store its state file in an Amazon S3 bucket.
+To enable shared state management, Configuring Terraform to store its state file in an Amazon S3 bucket.
 
 ### Task 1: Creating an S3 Bucket
-I created a new S3 bucket dedicated to storing Terraform state files, enabling centralized state management for my infrastructure deployments.
+Creating a new S3 bucket dedicated to storing Terraform state files, enabling centralized state management for infrastructure deployments.
 
 1. Create an S3 bucket with ACLs enabled and versioning.
 
 ### Task 2: Configuring Remote State
-I modified my Terraform configuration to use the S3 bucket as the remote state backend, ensuring that state data is securely stored and accessible for future deployments or collaboration.
+Modify my Terraform configuration to use the S3 bucket as the remote state backend, ensuring that state data is securely stored and accessible for future deployments or collaboration.
 
 1. Set up backend configuration (`backend.tf`) to store state files in S3.
 2. Initialize and apply:
@@ -178,7 +178,7 @@ I modified my Terraform configuration to use the S3 bucket as the remote state b
 This project focused on creating a Virtual Private Cloud (VPC) along with an EC2 instance within it.
 
 ### Task 1: Configuring VPC and Subnets
-I used Terraform to define a custom VPC with multiple subnets, setting up public and private subnet configurations. This VPC structure allows for isolated network resources.
+Use Terraform to define a custom VPC with multiple subnets, setting up public and private subnet configurations. This VPC structure allows for isolated network resources.
 
 1. Set up VPC configuration with subnets, NAT, and security groups.
 2. Apply configuration:
@@ -188,7 +188,7 @@ I used Terraform to define a custom VPC with multiple subnets, setting up public
     ```
 
 ### Task 2: Launching an EC2 Instance in the VPC
-Within the newly created VPC, I launched an EC2 instance, configuring it to use the appropriate subnet and security groups. After deployment, I verified the instance’s network settings and connectivity.
+Within the newly created VPC, launch an EC2 instance, configuring it to use the appropriate subnet and security groups. After deployment, verify the instance’s network settings and connectivity.
 
 1. Define security groups and SSH key pairs.
 2. Launch instance in created VPC subnet.
